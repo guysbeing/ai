@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/union.css">
+    <link rel="stylesheet" href="../css/color.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+<a href="hall.html" id="back">返回大厅</a>
+<div class="container" id="login-box">
+    <div class="form-container sign-up-container">
+        <form id="register">
+            <h1>注册</h1>
+            <div class="one-box">
+                <input type="text" id="register-username">
+                <span data-placeholder="Username" ></span>
+            </div>
+            <div class="one-box">
+                <input type="email" id="register-email">
+                <span data-placeholder="Email"></span>
+            </div>
+            <div class="one-box">
+                <input type="password" id="register-password">
+                <span data-placeholder="Password"></span>
+            </div>
+            <div class="one-box">
+                <input type="password" id="register-confirm-password">
+                <span data-placeholder="Confirm Password" ></span>
+            </div>
+            <button type="submit">注册</button>
+        </form>
+    </div>
+    <div class="form-container sign-in-container">
+        <form id="login">
+            <h1>登录</h1>
+            <div class="one-box">
+                <input type="text" id="login-username">
+                <span data-placeholder="Username" ></span>
+            </div>
+            <div class="one-box">
+                <input type="password" id="login-password">
+                <span data-placeholder="Password"></span>
+            </div>
+            <div class="one-box">
+                <input type="text" id="captcha_code">
+                <span data-placeholder="Captcha"></span>
+            </div>
+            <div class="one-box">
+                <img id="captcha_image"  alt="" src=""  title="看不清？换一张" onclick="captcha()">
+            </div>
+            <a href= "javascript:void(0)" id="to-page-forget">忘记密码？</a>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>已有账号？</h1>
+                <p>请使用您的账号进行登录</p>
+                <button class="ghost" id="signIn" >登录</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>没有账号?</h1>
+                <p>立即注册加入我们，和我们一起开始旅程吧</p>
+                <button class="ghost" id="signUp">注册</button>
+            </div>
+        </div>
+    </div>
+    <div class="slide-in-interface" id="slideIn">
+        <div class="header">
+            <top>忘记密码</top>
+        </div>
+        <div class="content">
+            <form id="forget">
+                <div class="one-box">
+                    <input type="text" id="forget-username">
+                    <span data-placeholder="Username" ></span>
+                </div>
+                <div class="one-box">
+                    <input type="text" id="forget-check-code">
+                    <span data-placeholder="Check Code" ></span>
+                </div>
+                <div class="one-box">
+                    <input type="password" id="forget-password">
+                    <span data-placeholder="New Password"></span>
+                </div>
+                <div class="one-box">
+                    <input type="password" id="forget-confirm-password">
+                    <span data-placeholder="Confirm Password" ></span>
+                </div>
+                <div class="button-box">
+                    <button type="button" onclick="resetPassword()">重置密码</button>
+                    <button type="button" onclick="checkEmail()">发送验证邮件</button>
+                    <button type="button" id="hideButton">关闭滑入界面</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="../js/register.js"></script>
+<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript" src="../js/forget.js"></script>
+<script type="text/javascript" src="../js/union-else.js"> </script>
+</html>

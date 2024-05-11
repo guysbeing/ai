@@ -1,0 +1,44 @@
+body{
+
+}
+#container{
+    background-image: var(--background-image);
+    padding: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+}
+#top {
+    display: flex;
+    flex-direction: row;
+}
+
+/* 游戏盒样式 */
+#game-box {
+    /* 添加样式以适应你的设计需求 */
+}
+
+/* 热门游戏样式 */
+#hot-game {
+    display: flex; /* 使用flex布局实现横向布局 */
+    /* 添加样式以适应你的设计需求 */
+}
+
+/* 全部游戏样式 */
+#all-game {
+    display: grid; /* 使用grid布局实现多行多列布局 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自动适应列数，每列最小宽度为200px */
+    grid-gap: 10px; /* 列之间的间距 */
+    /* 添加样式以适应你的设计需求 */
+}
+
+/* 游戏盒子样式 */
+.one-game {
+    /* 添加样式以适应你的设计需求 */
+}
+
+/* 页脚样式 */
+#footer {
+    /* 添加样式以适应你的设计需求 */
+}

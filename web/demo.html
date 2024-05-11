@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #bomb {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        #bomb::before,
+        #bomb::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: black;
+            transform-origin: top;
+            animation: explode 3s linear infinite;
+        }
+
+        #bomb::before {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+
+        #bomb::after {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scaleY(0);
+            }
+            20% {
+                transform: scaleY(0);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="bomb"></div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var bomb = document.getElementById("bomb");
+        var bombSize = 2000; // 炸弹最终的大小
+
+        function explode() {
+            bomb.style.width = bombSize + "px";
+            bomb.style.height = bombSize + "px";
+            bomb.style.left = -bombSize / 2 + "px";
+            bomb.style.top = -bombSize / 2 + "px";
+        }
+
+        setTimeout(explode, 1000); // 设置延迟触发爆炸效果的时间，单位为毫秒
+    });
+</script>
+</body>
+</html>

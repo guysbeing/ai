@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*body::after {*/
+/*    content: '你的文字 你的文字 你的文字'; !* 重复你的文本 *!*/
+/*    position: absolute;*/
+/*    top: 50%; !* 垂直居中（可能需要 transform） *!*/
+/*    left: 50%; !* 水平居中（可能需要 transform） *!*/
+/*    transform: translate(-50%, -50%); !* 使用 transform 进行精确的居中 *!*/
+/*    color: white; !* 文本颜色，根据需要调整 *!*/
+/*    font-size: 2em; !* 文本大小，根据需要调整 *!*/
+/*    pointer-events: none; !* 防止文本干扰点击事件 *!*/
+/*    z-index: -1; !* 确保文本在背景图像之上 *!*/
+/*    !* 你可以添加更多的样式，如 text-shadow 来增加文本的可见性 *!*/
+/*}*/
+.game-box{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap:10px;
+}
+.speed-choose{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.color-choose{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+canvas{
+
+}

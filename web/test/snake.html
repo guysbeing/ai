@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+    <script src="../js/vue.global.min.js"></script>
+    <link href="../css/snake.css" rel="stylesheet">
+    <link href="../css/color.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" v-on:keydown="handleKeydown" class="game-box">
+    <div class="top">
+        <div class="speed-choose">
+            <p>speed:{{ hardLevel }}</p>
+            <input type="range" min="1" max="100" v-model="hardLevel" >
+        </div>
+        <div class="color-choose">
+            <p>head</p>
+            <input type="color" id="headColor" v-model="headColor">
+            <p>body</p>
+            <input type="color" id="bodyColor" v-model="bodyColor">
+            <p>apple</p>
+            <input type="color" id="appleColor" v-model="appleColor">
+
+        </div>
+
+        <p>得分 {{ score }}</p>
+    </div>
+    <canvas ref="canvas" :width="width" :height="height"></canvas>
+</div>
+</body>
+<script src="../js/snake.js" type="text/javascript"></script>
+</html>
